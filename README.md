@@ -9,12 +9,10 @@ namespace RecipeApp
     class Program
     {
         static Recipe recipe;
-
-        static void Main(string[] args)
+      static void Main(string[] args)
         {
             bool runProgram = true;
-
-            while (runProgram)
+          while (runProgram)
             {
                 Console.WriteLine("Please select an option:");
                 Console.WriteLine("1. Enter a new recipe");
@@ -23,8 +21,7 @@ namespace RecipeApp
                 Console.WriteLine("4. Reset recipe quantities");
                 Console.WriteLine("5. Clear recipe");
                 Console.WriteLine("6. Exit program");
-
-                string input = Console.ReadLine();
+              string input = Console.ReadLine();
                 switch (input)
                 {
                     case "1":
@@ -48,11 +45,9 @@ namespace RecipeApp
                 }
             }
         }
-
         static void EnterRecipe()
         {
             recipe = new Recipe();
-
             Console.WriteLine("Please enter the number of ingredients: ");
             int ingredientCount = int.Parse(Console.ReadLine());
             for (int i = 0; i < ingredientCount; i++)
@@ -67,10 +62,9 @@ namespace RecipeApp
                 recipe.AddIngredient(new Ingredient(name, quantity, unit));
             }
 
-            Console.WriteLine("Please enter the number of steps: ");
+   Console.WriteLine("Please enter the number of steps: ");
             int stepCount = int.Parse(Console.ReadLine());
-            for (int i = 0; i < stepCount; i++)
-            {
+            for (int i = 0; i < stepCount; i++);           {
                 Console.WriteLine($"Step {i + 1}:");
                 Console.Write("Description: ");
                 string description = Console.ReadLine();
